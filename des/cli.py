@@ -13,7 +13,7 @@ from des.watcher import Watcher
 def write_script(loc):
     '''Write an empty script to the filesystem'''
     logger.info('Creating script '+ loc)
-    with open(loc, mode='x') as filehandle:
+    with open(loc, mode='w') as filehandle:
         filehandle.write('#!/bin/sh\n')
         filehandle.close()
         chmod(loc, 0o777)
